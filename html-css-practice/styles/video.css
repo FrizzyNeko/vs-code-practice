@@ -1,0 +1,35 @@
+
+.video-info-grid{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+.video-title{
+    font-size: 15px;
+    vertical-align: top;
+    margin: 0px 0px 8px 0px;
+    font-weight: bold;
+}
+.thumbnail-row{
+    margin-bottom: 12px;
+}
+.video-channel, .video-views{
+    color: gray;
+    font-size: 14px;
+    margin: 0px 0px 2px 0px;
+}
+
+.thumbnail{
+    width: 100%;
+}
+.profile-picture{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.video-grid{
+    font-family: "Roboto", sans-serif;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    column-gap: 16px;
+    row-gap: 40px;
+    box-sizing: border-box;}

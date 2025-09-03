@@ -1,0 +1,38 @@
+.youtube-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.left-section {
+    background-color: lightblue;
+    width: 150px;
+}
+.middle-section {
+    background-color: lightpink;
+    flex: 1;
+    margin-left: 70px;
+    margin-right: 35px;
+    max-width: 500px;
+}
+.right-section {
+    width: 200px;
+    background-color: lightgreen;
+}
+.youtube-logo{
+    width: 100px;
+}
+.youtube-search-input{
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 15px; 
+    transition: width 0.4s ease-in-out;
+    outline-style: none;
+}

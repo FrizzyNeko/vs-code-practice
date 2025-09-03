@@ -1,0 +1,326 @@
+.Amazon{
+    font-family: Arial, sans-serif;
+    margin: 20px 0px 30px 0px;
+}
+.amazonLink {
+    color: rgb(0, 113, 133);
+    font-size: 20px;
+    font-size: 15px;
+}
+.productText {
+    font-weight: bold;
+    font-size: 30px;
+}
+.priceText {
+    color: rgb(0, 118, 0);
+    font-size: 20px;
+    font-weight: bold;
+}
+.addcartButton {
+    background-color: rgb(255, 216, 20);
+    border: none;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.buyButton {
+    background-color: rgb(255, 164, 28);
+    border: none;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.addcartButton:hover {
+    background-color: rgb(255, 179, 0);
+}
+.buyButton:hover {
+    background-color: rgb(255, 140, 0);
+}
+.addcartButton:active {
+    background-color: rgb(255, 225, 134);
+}
+.buyButton:active {
+    background-color: rgb(255, 194, 112);
+}
+.amazonLink:hover {
+    color: rgb(0, 81, 95);
+}
+.amazonLink:active {
+    color: rgb(0, 48, 57);
+}
+.button-exercise{
+    margin: 20px 0px 30px 0px;
+    font-family: Arial, sans-serif;}
+.stretchButton {
+    background-color: rgb(0, 123, 255);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 12px;
+    transition: 1s;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.stretchButton:hover {
+    background-color: rgb(0, 105, 217);
+    padding: 30px 64px;
+}
+.threedclickButton {
+    background-color: rgb(40, 167, 69);
+    box-shadow: 0px 5px 5px #999;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 12px;
+    transition: 0s;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.threedclickButton:active {
+    background-color: rgb(33, 136, 56);
+    box-shadow: 0px 2px 2px #666;
+    transform: translateY(3px);
+}
+.searchInput {
+    width: 300px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 15px; 
+    transition: width 0.4s ease-in-out;
+}
+.tweet-tutorial{
+    font-family: Arial, sans-serif;
+    margin: 20px 0px 30px 0px;
+}  
+.profile-pic{
+    vertical-align: top;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+.tweet-tutorial{
+    margin: 25px 0px 30px 0px;
+    display: inline-block;
+    vertical-align: top;
+}
+.tweet-input{
+    width: 250px;
+    height:50px;
+    vertical-align: center;
+    box-sizing: border-box;
+    border: 0px solid #ccc;
+    display: inline-block;
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 12px 20px 12px 15px; 
+    outline: none;
+    resize: none;
+}
+.tweet-button{
+    background-color: rgb(29, 161, 242);
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.tweet-button:active {
+    background-color: rgb(26, 145, 218);
+}
+.google-search-tutorial{
+    font-family: Arial, sans-serif;
+    margin: 20px 0px 30px 0px;
+}
+.google-header{
+    text-align: center;
+}
+.google-logo{
+    display: block;
+    margin: 0 auto;
+    width: 272px;
+    height: 92px;
+}
+.google-search-input{
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 500px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 24px;
+    font-size: 16px;
+    background-color: white;
+    padding: 12px 20px 12px 15px; 
+    outline: none;
+}
+.google-buttons{
+    display: flex;               
+    justify-content: center;    
+    gap: 10px;                  
+    margin-top: 20px;  
+}
+.google-search-button, .feeling-lucky-button{
+    background-color: rgb(240, 240, 240);
+    border: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.google-buttons button:hover {
+    background-color: rgb(220, 220, 220);
+}
+.google-buttons button:active {
+    background-color: rgb(200, 200, 200);
+}
+.first-friend{
+    display: inline-block;      
+    margin-right: 15px;           
+      max-width: 90%;                    
+      width: 250px;                       
+      font-family: Arial, sans-serif;
+      padding: 20px;                      
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      background-color: #f9f9f9;          
+      border-radius: 10px;           
+}
+.friend-pic{
+    vertical-align: top;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.friend-info{
+    display: inline-block;
+    vertical-align: top;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 20px 0px 10px 10px;
+}
+.mutual-friends{
+    vertical-align: top;
+    color: gray;
+    font-size: 14px;
+    margin: 0px 0px 10px 10px;
+
+}
+.add-friend-button{
+    background-color: rgb(29, 161, 242);
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+     margin: 20px 0px 10px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.add-friend-button:hover {
+    background-color: rgb(26, 145, 218);
+}
+.add-friend-button:active {
+    background-color: rgb(20, 113, 168);
+}
+
+.second-friend{
+    display: inline-block;                     /* block element */
+      max-width: 90%;                     /* ekran genişliğine göre küçülür */
+      width: 250px;                        /* sabit genişlik, max-width ile responsive */
+      font-family: Arial, sans-serif;
+      padding: 20px;                       /* içerik ile kenar arasında boşluk */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      background-color: #f9f9f9;           /* isteğe bağlı arka plan */
+      border-radius: 10px;                 /* opsiyonel: köşeleri yuvarlat */
+}
+.youtube-video-tutorial{
+    font-family: Arial, sans-serif;
+    margin: 20px 0px 30px 0px;
+}
+.youtube-header{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.youtube-logo{
+    width: 100px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.youtube-search-input{
+    width: 300px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 15px; 
+    transition: width 0.4s ease-in-out;
+}
+.youtube-search-button{
+    background-color: rgb(255, 0, 0);
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.video-thumbnail {         
+    width: 300px;   
+}
+
