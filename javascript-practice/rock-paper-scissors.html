@@ -3,5 +3,41 @@
   <head></head>
   <body>
    <p>Rock, Paper and Scissors</p>
+   <button onclick="
+    playGame('rock');
+   ">Rock</button>
+   <button onclick="
+      playGame('paper');
+    ">Paper</button>
+   <button onclick="
+      playGame('scissors');
+    ">Scissors</button>
+   <script>
+    function playGame(myMove) {
+        let result = '';
+
+        if(myMove === 'rock'){
+          const computerMove = pickComputerMove();
+          computerMove === myMove ? result = 'Tie.' : computerMove === 'scissors' ? result = 'You win!' : result = 'You Lose.';
+          alert(`You picked ${myMove}. Computer picked ${computerMove}. ${result}`);
+        }
+        if(myMove === 'paper'){
+          const computerMove = pickComputerMove();
+          computerMove === myMove ? result = 'Tie.' : computerMove === 'rock' ? result = 'You win!' : result = 'You Lose.';
+          alert(`You picked ${myMove}. Computer picked ${computerMove}. ${result}`);
+        }
+        if(myMove === 'scissors'){
+          const computerMove = pickComputerMove();
+          computerMove === myMove ? result = 'Tie.' : computerMove === 'rock' ? result = 'You lose.' : result = 'You win!';
+          alert(`You picked ${myMove}. Computer picked ${computerMove}. ${result}`);
+        }
+        function pickComputerMove() {
+          const randomNumber = Math.random();
+          let computerMove = randomNumber <= 0.3 ? 'rock' : randomNumber <= 0.6 ? 'paper' : 'scissors';
+          return computerMove;
+        }
+
+    }
+   </script>
   </body>
 </html>
