@@ -25,7 +25,7 @@ Launch html files in your browser.
 Explore the code in css and js files.
 
 
-### Connect:
+## Connect:
 
 GitHub: FrizzyNeko
 
