@@ -13,12 +13,13 @@
       playGame('scissors');
     ">Scissors</button>
     <button onclick="reset();">Reset</button>
+
    <script>
-        const score = {
-          wins: 0,
-          ties: 0,
-          loses: 0
-        };
+        let score = JSON.parse(localStorage.getItem('score')) || {
+        wins: 0,
+        ties: 0,
+        loses: 0
+      };
 
     function playGame(myMove) {
         const computerMove = pickComputerMove();  
@@ -43,6 +44,8 @@
           score.loses ++;
         }
 
+        localStorage.setItem('score', JSON.stringify(score));
+
         alert(`You picked ${myMove}. Computer picked ${computerMove}. ${result}
         Wins: ${score.wins} Ties: ${score.ties} Loses: ${score.loses}`);
     }
@@ -55,6 +58,7 @@
       score.wins = 0;
       score.ties = 0;
       score.loses = 0;
+      localStorage.removeItem('score');
     }
    </script>
   </body>
