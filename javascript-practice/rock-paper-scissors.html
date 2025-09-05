@@ -12,7 +12,10 @@
    <button onclick="
       playGame('scissors');
     ">Scissors</button>
-    <button onclick="reset();">Reset</button>
+    <p class ="js-result"></p>
+    <p class="js-moves"></p>
+    <p class="js-score"></p>
+    <button onclick="reset();">Reset Score</button>
 
    <script>
         let score = JSON.parse(localStorage.getItem('score')) || {
@@ -20,6 +23,10 @@
         ties: 0,
         loses: 0
       };
+  
+    updateScoreElement();
+    
+    updateMovesElement();
 
     function playGame(myMove) {
         const computerMove = pickComputerMove();  
@@ -43,12 +50,26 @@
         } else if (result === 'You lose.'){
           score.loses ++;
         }
-
+        
         localStorage.setItem('score', JSON.stringify(score));
+
+        updateScoreElement(); 
 
         alert(`You picked ${myMove}. Computer picked ${computerMove}. ${result}
         Wins: ${score.wins} Ties: ${score.ties} Loses: ${score.loses}`);
+
+        document.querySelector('.js-moves')
+        .innerHTML = `You ${myMove} - ${computerMove} Computer`;
+
+        document.querySelector('.js-result')
+        .innerHTML = result;
     }
+
+    function updateScoreElement(){
+      document.querySelector('.js-score')
+      .innerHTML = `Wins: ${score.wins} Ties: ${score.ties} Loses: ${score.loses}`; 
+    }
+
     function pickComputerMove() {
           const randomNumber = Math.random();
           let computerMove = randomNumber <= 0.3 ? 'rock' : randomNumber <= 0.6 ? 'paper' : 'scissors';
@@ -59,6 +80,7 @@
       score.ties = 0;
       score.loses = 0;
       localStorage.removeItem('score');
+      updateScoreElement();
     }
    </script>
   </body>
