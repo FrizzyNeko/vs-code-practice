@@ -7,11 +7,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
   .header {
-    display: block;
     margin-top: 0px;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
     font-size: 32px;
     font-weight: 700;
     text-align: center;
@@ -21,9 +19,24 @@
     text-shadow: 0 2px 8px rgba(255,255,255,0.10);
     background: rgba(18, 20, 30, 0.96);
     padding: 24px 0 18px 0;
-    border-bottom: 1px solid #fff;
-    box-shadow: 0 2px 16px rgba(255,255,255,0.08);
+    border-bottom: 0;
+    position: relative;
     width: 100%;
+  }
+
+  .header::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 3px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #4e6ef2 0%, #a1c4fd 50%, #4e6ef2 100%);
+    opacity: 0.85;
+    box-shadow: 0 2px 8px rgba(78,110,242,0.18);
   }
 
   .move-icon {
