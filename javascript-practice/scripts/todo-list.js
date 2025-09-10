@@ -4,27 +4,32 @@ renderTodoList();
 
 function renderTodoList() {
     let todoListHTML = ''; // HTML'de görüntülenecek todoList'i oluştur
-
-    for (let i = 0; i < todoList.length; i++) { // todoList'in uzunluğu kadar dön
-        const todoObject = todoList[i]; // todoList'in i. elemanını al
-
-        const { name, dueDate } = todoObject; // todoObject'in name ve dueDate özelliklerini al ve değişkenlere at
+    
+    todoList.forEach((todoObject, index) => {
+         const { name, dueDate } = todoObject; // todoObject'in name ve dueDate özelliklerini al ve değişkenlere at
 
         // todoListHTML'e div'leri ekle ve içeriğini todoObject ile doldur 
         todoListHTML += ` 
         <div>${name}</div>
         <div>${dueDate}</div>
-        <button onclick="
-            todoList.splice(${i}, 1);
-            renderTodoList();
-            " class="delete-todo-button">
+        <button class="delete-todo-button
+            js-delete-todo-button">
             Delete</button>
         `;
-    }
+    });
+
 
     document.querySelector('.js-todo-list').innerHTML = todoListHTML;
+
+    document.querySelectorAll('.js-delete-todo-button').forEach((button, index) => {
+        button.addEventListener('click', () => {
+            todoList.splice(index, 1);
+            renderTodoList();
+        });
+    });
 }
 
+document.querySelector('.js-add-todo-button').addEventListener('click', addTodo);
 
 function addTodo() {
     // todoList'e name değerini ekle
