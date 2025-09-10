@@ -1,87 +1,37 @@
 <!DOCTYPE html>
 <html>
-  <head></head>
+  <head>
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles/rock-paper-scissors.css">
+  </head>
   <body>
-   <p>Rock, Paper and Scissors</p>
-   <button onclick="
-    playGame('rock');
-   ">Rock</button>
-   <button onclick="
-      playGame('paper');
-    ">Paper</button>
-   <button onclick="
-      playGame('scissors');
-    ">Scissors</button>
-    <p class ="js-result"></p>
-    <p class="js-moves"></p>
-    <p class="js-score"></p>
-    <button onclick="reset();">Reset Score</button>
+   <p class="title">Rock Paper Scissors</p>
+   <div class="buttons-container">
+      <button class="move-button" onclick="
+      playGame('rock');
+    "><img class="move-icon" src="images/rock-emoji.png"></button>
+    <button class="move-button" onclick="
+        playGame('paper');
+      "><img class="move-icon" src="images/paper-emoji.png"></button>
+    <button class="move-button" onclick="
+        playGame('scissors');
+      "><img class="move-icon" src="images/scissors-emoji.png"></button>
+   </div>
+    <div class="result-container">
+        <p class ="js-result result"></p>
+        <p class="js-moves"></p>
+        <p class="js-score"></p>
+        <button class="reset-button" onclick="reset();">Reset Score</button>
+        <button class ="auto-play-button js-autoplay-button" onclick="autoPlay();">Auto Play</button>
+    </div>
 
-   <script>
-        let score = JSON.parse(localStorage.getItem('score')) || {
-        wins: 0,
-        ties: 0,
-        loses: 0
-      };
-  
-    updateScoreElement();
-    
-    updateMovesElement();
+    <div style="position: fixed; bottom: 0; right: 0; font-size: 12px; color: #666;">
+      Created by Asrın Senemoğlu
+    </div>
 
-    function playGame(myMove) {
-        const computerMove = pickComputerMove();  
-        
-        let result = '';
 
-        if(myMove === 'rock'){
-          computerMove === myMove ? result = 'Tie.' : computerMove === 'scissors' ? result = 'You win!' : result = 'You lose.';
-        }
-        if(myMove === 'paper'){
-          computerMove === myMove ? result = 'Tie.' : computerMove === 'rock' ? result = 'You win!' : result = 'You lose.';
-        }
-        if(myMove === 'scissors'){
-          computerMove === myMove ? result = 'Tie.' : computerMove === 'rock' ? result = 'You lose.' : result = 'You win!';
-        }
 
-        if (result === 'You win!') {
-          score.wins ++;
-        } else if (result === 'Tie.') {
-          score.ties ++;
-        } else if (result === 'You lose.'){
-          score.loses ++;
-        }
-        
-        localStorage.setItem('score', JSON.stringify(score));
 
-        updateScoreElement(); 
-
-        alert(`You picked ${myMove}. Computer picked ${computerMove}. ${result}
-        Wins: ${score.wins} Ties: ${score.ties} Loses: ${score.loses}`);
-
-        document.querySelector('.js-moves')
-        .innerHTML = `You ${myMove} - ${computerMove} Computer`;
-
-        document.querySelector('.js-result')
-        .innerHTML = result;
-    }
-
-    function updateScoreElement(){
-      document.querySelector('.js-score')
-      .innerHTML = `Wins: ${score.wins} Ties: ${score.ties} Loses: ${score.loses}`; 
-    }
-
-    function pickComputerMove() {
-          const randomNumber = Math.random();
-          let computerMove = randomNumber <= 0.3 ? 'rock' : randomNumber <= 0.6 ? 'paper' : 'scissors';
-          return computerMove;
-    }
-    function reset(){
-      score.wins = 0;
-      score.ties = 0;
-      score.loses = 0;
-      localStorage.removeItem('score');
-      updateScoreElement();
-    }
-   </script>
+   <script src="scripts/rock-paper-scissors.js"></script>
   </body>
 </html>

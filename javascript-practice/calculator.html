@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
-  <head></head>
+  <head>
+    <title>Calculator</title>
+  </head>
   <body>
     <p>
       <button onclick= "updateCalculation('1');" >1</button>
@@ -24,20 +26,7 @@
       <button onclick="updateCalculation('c');">c</button>
       <button onclick="updateCalculation('=');">=</button>
     </p>
-    <script>
-       let calculation = ''; 
-
-        function updateCalculation(number){
-            if (number === 'c') {
-                calculation = '';
-            } else if (number === '=') {
-                calculation = eval(calculation);
-            } else {
-                calculation += number;
-            }
-            console.log(calculation);
-        }
-
-    </script>
+    <p class="result"></p>
+    <script src="scripts/calculator.js"></script>
   </body>
 </html>
