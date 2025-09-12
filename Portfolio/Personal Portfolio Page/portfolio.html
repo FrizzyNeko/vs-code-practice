@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asrın Senemoğlu - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div id="logo">Asrın Senemoğlu</div>
+        <div id="nav-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <a href="https://github.com/frizzyneko" id="profile-link" target="_blank">GitHub</a>
+        </div>
+        <div id="hamburger">☰</div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="welcome-section">
+        <div class="hero-content">
+            <h1>Hello, I'm Asrın</h1>
+            <p>Indie Game Developer. Check out my games on Itch.io!</p>
+            <a href="https://amorygamestudio.itch.io" target="_blank" class="hero-cta">Visit My Itch.io</a>
+        </div>
+    </section>
+
+    <!-- About Me / Amory Game Studio Section -->
+    <section id="about">
+        <h2>Amory Game Studio</h2>
+        <div class="about-container">
+            <img src="https://img.itch.zone/aW1nLzIzMDQ4ODM2LnBuZw==/original/iiHn8H.png" alt="Amory Game Studio Logo">
+            <div class="about-text">
+                <p>
+                    I am the co-founder of <strong>Amory Game Studio</strong>, where I craft immersive indie games. 
+                    Beyond game development, I specialize in anime-style illustrations, pixel art, video editing, and 2D/3D animations.
+                </p>
+                <a href="https://amorygames.carrd.co" target="_blank" class="hero-cta">Visit Our Studio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project-container">
+            <div class="project-tile">
+                <h3>My Itch.io Page</h3>
+                <p>Explore my collection of small-scale indie games, showcasing my passion for creative game design.</p>
+                <a href="https://amorygamestudio.itch.io" target="_blank">View</a>
+            </div>
+            <div class="project-tile">
+                <h3>GitHub</h3>
+                <p>My GitHub features a variety of indie projects and playable experiments from my game development journey.</p>
+                <a href="https://github.com/FrizzyNeko" target="_blank">View</a>
+            </div>
+            <div class="project-tile">
+                <h3>ArtStation</h3>
+                <p>Discover my portfolio of anime-style illustrations and creative artwork on ArtStation.</p>
+                <a href="https://www.artstation.com/frizzyneko" target="_blank">View</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Interested in collaborating or just want to say hi? Feel free to reach out!</p>
+        <a href="mailto:asrin.senemoglu@gmail.com" class="contact-button">Send Email</a>
+    </section>
+
+    <script>
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

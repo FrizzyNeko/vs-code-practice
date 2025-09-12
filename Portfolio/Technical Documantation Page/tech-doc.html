@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="navbar">
+        <header>Web Development</header>
+        <a class="nav-link" href="#HTML_Fundamentals">HTML Fundamentals</a>
+        <a class="nav-link" href="#CSS_Styling">CSS Styling</a>
+        <a class="nav-link" href="#JavaScript_Basics">JavaScript Basics</a>
+        <a class="nav-link" href="#Responsive_Design">Responsive Design</a>
+        <a class="nav-link" href="#Web_APIs">Web APIs</a>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="HTML_Fundamentals">
+            <header>HTML Fundamentals</header>
+            <p>HTML is the backbone of web development and defines the structure of web pages.</p>
+            <p>It uses tags to create elements like headings, paragraphs, and links.</p>
+            <code>
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code>
+            <ul>
+                <li>Semantic HTML improves accessibility</li>
+                <li>Tags are case-insensitive</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="CSS_Styling">
+            <header>CSS Styling</header>
+            <p>CSS controls the presentation of web pages, including colors and layouts.</p>
+            <p>It can be applied inline, internally, or externally via stylesheets.</p>
+            <code>
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+            </code>
+            <ul>
+                <li>CSS selectors target elements</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="JavaScript_Basics">
+            <header>JavaScript Basics</header>
+            <p>JavaScript adds interactivity to web pages, enabling dynamic content.</p>
+            <p>It runs in the browser and manipulates the DOM.</p>
+            <code>
+let message = "Hello, World!";
+console.log(message);
+            </code>
+            <ul>
+                <li>Variables: let, const, var</li>
+                <li>Functions enhance reusability</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="Responsive_Design">
+            <header>Responsive Design</header>
+            <p>Responsive design ensures websites work well on all devices.</p>
+            <p>Media queries and flexible layouts are key techniques.</p>
+            <code>
+@media (max-width: 600px) {
+    body { font-size: 16px; }
+}
+            </code>
+        </section>
+
+        <section class="main-section" id="Web_APIs">
+            <header>Web APIs</header>
+            <p>Web APIs allow interaction with browser features and external services.</p>
+            <p>Examples include the DOM API and Fetch API for HTTP requests.</p>
+            <code>
+fetch('https://api.example.com')
+    .then(response => response.json())
+    .then(data => console.log(data));
+            </code>
+        </section>
+
+        <div id="credit" class="credit">
+            Created by Asrın Senemoğlu
+        </div>
+    </main>
+
+    <script>
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
+
