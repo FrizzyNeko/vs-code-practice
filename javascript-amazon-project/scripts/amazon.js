@@ -1,5 +1,6 @@
 import { cart, addToCart } from '../data/cart.js';
 import { products } from '../data/products.js';
+import { formatCurrency } from './utils/money.js';
 
 
 
@@ -28,7 +29,7 @@ products.forEach((product) => {
       </div>
 
       <div class="product-price">
-        $${(product.priceCents / 100).toFixed(2) /* Urun fiyatini 2 ondalikli olarak formatla*/}
+        $${formatCurrency(product.priceCents) /* Urun fiyatini 2 ondalikli olarak formatla*/}
       </div>
 
       <div class="product-quantity-container">
