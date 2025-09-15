@@ -29,6 +29,8 @@ Explore the code in css and js files.
 
 GitHub: FrizzyNeko
 
+[LinkedIn](https://www.linkedin.com/in/asrinsenemoglu)
+
 Email: asrin.senemoglu@gmail.com
 
 Thanks for stopping by!
