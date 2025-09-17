@@ -1,7 +1,7 @@
 export let cart = JSON.parse(localStorage.getItem('cart'));
 
 if (!cart) {
-    cart = [{
+  cart = [{
     productId: 'e43638ce-6aa0-4b85-b27f-e1d07eb678c6',
     quantity: 2,
   }, {
@@ -15,24 +15,20 @@ function saveToStorage() {
 }
 
 export function addToCart(productId) {
-  let matchingItem; // Aynı urunu sepete eklemek icin bir degisken tanimla
+  let matchingItem;
 
-  cart.forEach((cartItem) => {  // Her bir sepete ekle butonuna tıklandıgında
+  cart.forEach((cartItem) => {
     if (productId === cartItem.productId) {
       matchingItem = cartItem;
     }
   });
-  // Urunun adetini al
-  const quantitySelector = document.querySelector(`.js-product-quantity-selector-${productId}`);
-  let quantityValue = Number(quantitySelector.value);
 
-  
-  if (matchingItem) { // Aynı urunu sepete eklemek icin
-    matchingItem.quantity += quantityValue;
-  } else { // Yeni urunu sepete eklemek icin
+  if (matchingItem) {
+    matchingItem.quantity += 1;
+  } else {
     cart.push({
       productId: productId,
-      quantity: quantityValue
+      quantity: 1
     });
   }
 
@@ -47,9 +43,32 @@ export function removeFromCart(productId) {
       newCart.push(cartItem);
     }
   });
-  
+
   cart = newCart;
 
   saveToStorage();
 }
 
+export function calculateCartQuantity() {
+  let cartQuantity = 0;
+
+  cart.forEach((cartItem) => {
+    cartQuantity += cartItem.quantity;
+  });
+
+  return cartQuantity;
+}
+
+export function updateQuantity(productId, newQuantity) {
+  let matchingItem;
+
+  cart.forEach((cartItem) => {
+    if (productId === cartItem.productId) {
+      matchingItem = cartItem;
+    }
+  });
+
+  matchingItem.quantity = newQuantity;
+
+  saveToStorage();
+}
