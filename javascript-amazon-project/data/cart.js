@@ -76,6 +76,7 @@ export function updateQuantity(productId, newQuantity) {
   saveToStorage();
 }
 
+// Update delivery option
 export function updateDeliveryOption(productId, deliveryOptionId) {
   let matchingItem;
 
