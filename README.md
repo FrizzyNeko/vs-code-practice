@@ -16,7 +16,7 @@ Welcome! This repository showcases my hands-on practice with **HTML, CSS, and Ja
 ## Getting Started
 1. Clone the repository:
    ```bash
-   git clone https://github.com/FrizzyNeko/vs-code-practice
+   git clone https://github.com/FrizzyNeko/web-design-practice
    
 Open any project folder in your code editor.
 
